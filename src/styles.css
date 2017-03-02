@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Endor";
+    src: url(/assets/endor/ENDOR___.ttf) format("truetype");
+}
+body { 
+    font-family: "Endor", Verdana, Tahoma;
+    margin: 0;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+hr {
+    max-width : 500px;
+}
