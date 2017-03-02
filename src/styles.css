@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Endor";
-    src: url(/assets/endor/ENDOR___.ttf) format("truetype");
+    src: url(assets/endor/ENDOR___.ttf) format("truetype");
 }
 body { 
     font-family: "Endor", Verdana, Tahoma;
