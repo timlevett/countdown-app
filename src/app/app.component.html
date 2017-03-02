@@ -1,8 +1,17 @@
-<div>
+<div *ngIf="!clicked">
+  What are we counting down until? 
+  <input type="text" [(ngModel)]="title">
+  <br>
+  When is the big day?
+  <input class='datetime' type="datetime" [(ngModel)]="doomsDay" size=40>
+  <button (click)="clicked = true">Hide!</button>
+</div>
+<div *ngIf="title">
   <h1>
     {{title}}
   </h1>
  {{doomsDay | date:'EEEE MMMM d, y HH:mm:ss'}}
+ {{today | date:'EEEE MMMM d, y HH:mm:ss'}}
 <br/><br/>
  Seconds<hr/>{{seconds | commaNumber:0}}<hr/>
  Minutes<hr/>{{minutes | commaNumber}}<hr/>
@@ -11,6 +20,6 @@
  Work Days<hr/>{{workDays | commaNumber}}<hr/>
 
  <br>
- <img src='https://68.media.tumblr.com/56416fe9e3acf25ffbb1be8375904bea/tumblr_oi0uy7OTGh1vxy2a1o1_500.gif'/>
+ <img src='https://media2.fdncms.com/riverfronttimes/imager/u/blog/2649170/beavis_butthead_6_7_thumb_400x298.gif'/>
 </div>
 

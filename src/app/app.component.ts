@@ -12,7 +12,7 @@ export class AppComponent {
   private future:Date;
   private diff:number;
 
-  title = 'Time until payday';
+  title : String;
   doomsDay = new Date("August 4, 2017 08:00:00")
   seconds : number;
   minutes : number;
