@@ -1,12 +1,19 @@
-<div *ngIf="!clicked">
-  What are we counting down until? 
-  <input type="text" [(ngModel)]="title">
-  <br>
-  When is the big day?
-  <input class='datetime' type="datetime" [(ngModel)]="doomsDay" size=40>
-  <button (click)="clicked = true">Hide!</button>
-</div>
-<div *ngIf="title">
+<button md-icon-button (click)="clicked=false" *ngIf="clicked">
+  <md-icon>more_vert</md-icon>
+</button>
+
+<md-card *ngIf="!clicked" class='form'>
+    <md-input-container>
+    <input type="text" [(ngModel)]="title" mdInput placeholder="Counting down to..." />
+    </md-input-container>
+    <br/>
+    <md-input-container>
+      <input type="datetime-local" [(ngModel)]="doomsDay" mdInput placeholder="When is the big day?" size=40 />
+    </md-input-container>
+    <br/>
+    <button md-button (click)="clicked = true" [disabled]="!title">Hide!</button>
+</md-card>
+<div *ngIf="title" class='display'>
   <h1>
     {{title}}
   </h1>

@@ -10,7 +10,7 @@ body {
     background-color: #C0C0C0;
 }
 
-div {
+div.display {
     text-align: center;
 }
 
@@ -23,13 +23,17 @@ hr {
     max-width : 500px;
 }
 
-input {
-    line-height: 2em;
-	border-radius: 6px;
-	font-size: large;
-	font-family: "Endor", Verdana, Tahoma;
-}
-
 input.datetime {
     font-family: Verdana, Tahoma;
+}
+
+md-card.form {
+    margin: 20px;
+    background-color: #fffffe;
+}
+
+md-card.form button {
+    position : fixed;
+    top : 75px;
+    right: 50px;
 }
